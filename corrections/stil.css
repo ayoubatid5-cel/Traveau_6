@@ -1,0 +1,18 @@
+.boutons { display: flex; } 
+
+.entete { display: flex; align-items: center; } 
+
+.cartes { display: flex; gap: 1rem; flex-wrap: wrap; } 
+.cartes div { flex: 0 0 250px; } 
+
+.recherche { display: flex; flex: 1; } 
+.recherche input { flex-grow: 1; } 
+
+.lateral { display: flex; gap: 1rem; flex-direction: column; } 
+
+.barre { display: flex; align-items: center; gap: 1rem; } 
+.deconnexion { margin-left: auto; } 
+
+.logo { width: 60px; flex-shrink: 0; } 
+
+.etiquettes { display: flex; gap: 0.5rem; justify-content: center; } 

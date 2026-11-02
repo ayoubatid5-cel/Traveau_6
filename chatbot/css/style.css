@@ -1,0 +1,154 @@
+/* Base : box-sizing, police Google Fonts, main centré */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #eef2f7;
+}
+
+main {
+  max-width: 700px;
+  margin: 20px auto;
+  background-color: #f2f7fc;
+  border: 1px solid #cfd8e3;
+}
+
+/* Header sticky : avatar + (h1 / statut) côte à côte, centrés verticalement */
+.chat-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  background-color: #1f3864;
+  color: #fff;
+}
+
+.chat-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.statut {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #4cd964;
+}
+
+.avatar {
+  flex-shrink: 0; /* ne rétrécit jamais */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background-color: #e6ecf5;
+  object-fit: cover;
+}
+
+/* Liste des capacités : étiquettes arrondies qui passent à la ligne */
+.capacites {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 16px 20px 0;
+}
+
+.capacites li {
+  padding: 6px 14px;
+  background-color: #d6e4f0;
+  color: #1f3864;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+/* Messages : flex en colonne */
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 24px 20px;
+  min-height: 350px;
+}
+
+.message {
+  margin: 0;
+  padding: 14px 18px;
+  border-radius: 12px;
+  width: fit-content;
+  max-width: 70%;
+  line-height: 1.4;
+}
+
+/* Bot à gauche, utilisateur à droite */
+.bot {
+  background-color: #d6e4f0;
+  color: #1f3864;
+  align-self: flex-start;
+}
+
+.user {
+  background-color: #2e75b6;
+  color: #fff;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.bot::before {
+  content: "AXA : ";
+  font-weight: 700;
+}
+
+/* Formulaire : flex, label masqué visuellement, champ flexible, bouton fixe */
+.chat-form {
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+}
+
+.chat-form label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 14px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 2px solid #2e75b6;
+  border-radius: 8px;
+  outline: none;
+}
+
+.chat-form input:focus {
+  background-color: #eaf3fb;
+  border-color: #1f3864;
+}
+
+.chat-form button {
+  flex: none;
+  padding: 14px 22px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  color: #fff;
+  background-color: #2e75b6;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.chat-form button:hover {
+  background-color: #1f3864;
+}

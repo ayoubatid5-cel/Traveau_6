@@ -1,0 +1,47 @@
+.boite { height: 150px; margin-bottom: 1rem; border: 2px dashed #2E75B6; }
+.boite span { width: 60px; padding: 1rem; background-color: #1F3864; color: white; text-align: center; }
+.b1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.b2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.b3{
+    display: flex;
+    justify-content: space-between;
+}
+.b4 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.b5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.b6 {
+    display: flex;
+    justify-content: space-evenly;
+}
+.b6 :nth-child(2) {
+  align-self: flex-end;
+}
+.b7 {
+    display: flex;
+}
+.b7 :nth-child(2){
+    flex-grow: 1;
+}
+.b8 {
+    display: flex;   
+}
+.b8 :nth-child(3){
+    order: -1;
+}
